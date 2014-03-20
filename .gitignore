@@ -1,0 +1,6 @@
+*~
+.idea/*
+assignment.md
+misspelled_queries.csv
+word_frequency.csv
+*.pyc
