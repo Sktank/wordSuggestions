@@ -1,0 +1,25 @@
+1. How would the code perform if the size of the dictionary were 1 million words?
+
+    Right now, for each misspelled word, the algorithm compares it to all words in the dictionary. If the dictionary were
+    size 1 million, the code would be significantly slower. Right now the dictionary is on the order of 10,000 words. Making
+    this 1 million would increase the run time by an order of 100.
+
+2. How would the code perform with an edit distance of 3?
+
+    Before checking the edit distance, I compare the length of the misspelled word with the length of the
+    possible suggestion. If the difference in length is greater than the max edit distance, I dont bother calculating
+    the edit distance. If the max edit distance was raised to 3, the code would take longer to run because more
+    edit distance calculations would have to be performed.
+
+    Additionally, there would be more dictionary words that have an edit distance below the maximum and therefore
+    the quality of your suggestions would be worse.
+
+
+3. How does the code perform on long queries versus short queries and why?
+
+    Overall, the computation needed to calculate the edit distance for a long query is greater than that of a short
+    query. This is because for two strings s1 and s2, you need to compute a matrix of size s1 x s2.  However,
+    before computing the edit distance, I check to see if the difference between the length of the misspelled word and
+    the length of the dictionary word is less than or equal to the max edit distance. In English, the average word size
+    is around 5. Therefore, with queries significantly larger or smaller than 5, most dictionary words will not pass
+    this test and the edit distance will not need to be computed.
