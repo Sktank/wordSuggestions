@@ -23,4 +23,4 @@ A file containing the words in your dictionary. Each line is of the format: {wor
 ###Attributions:
 
 I did not write the file distance.py. It was written by an unknown friend who decided to post it on the internet,
-and was discovered by me during January of 2013.
+and was discovered by me in January of 2013.
